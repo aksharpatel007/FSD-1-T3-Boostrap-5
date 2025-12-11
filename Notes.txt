@@ -1,0 +1,264 @@
+CH-6 Bootstrap
+
+1.use a Bootstrap via CDN(content delivery network)
+2.download Bootstrap
+css/Bootstrap.min.css
+js/Bootstrap.bundle.min.js
+
+container vs container fluid 
+
+.container-->fixed width-->centered
+.continer-fluid-->use 100% width 
+
+size:-xs,sm,md,lg,xl,xxl
+
+-->Bootstrap utility class
+
+1.spacing utility M,P
+
+2.side:-
+blank->for
+t->top
+b->bottom
+s->start
+e->end
+x->left+right
+y->top+bottom
+
+size-->
+0->0-0px
+1->0.25rem ->4px
+2->0.5rem ->8px
+3->1rem-> 16px(default)
+4-> 1.5rem-> 24px
+5-> 3rem-> 48px
+
+auto-->auto
+{property}{side}-{size}
+
+example:-
+
+m(margin)-3
+mt-2
+p(padding)x(left+right)-4
+ms-0
+mx-auto
+
+width class          height class
+w-25                   h-25
+w-50                   h-50
+w-75                   h-75
+w-100                  h-100
+w-auto                 h-auto
+
+Text colors 
+
+text-primary-->blue
+text-secondary-->gray
+text-success-->green
+text-danger-->red
+text-warning-->yellow
+text-info-->light blue
+text-dark-->black
+text-light-->light
+text-muted-->fadded gray
+text-white-->white
+
+background colors
+
+bg-primary-->blue
+bg-secondary-->gray
+bg-success-->green
+bg-danger-->red
+bg-warning-->yellow
+bg-info-->light blue
+bg-dark-->black
+bg-light-->light
+bg-transperent-->fadded gray
+bg-white-->white
+
+Typography & Text utility
+
+text-lowercase 
+text-uppercase
+text-capitalize
+text-decoration -none
+text-decoration-underline
+text-decoration-line-through
+text-start
+text-center
+text-end
+fs-1 to fs-6
+fw-bold
+fw-bolder
+fw-light
+fw-lighter
+fst-italic
+fst-normal
+
+shadow
+
+shadow-sm
+shadow
+shadow-lg
+
+Borders
+Border
+Border-0
+border-top
+border-bottom
+border-start
+border-end
+border-primary
+border-warning
+border-info
+border-dark
+border-light
+border-white
+border-1-->thin
+Border-2
+border-3
+border-4
+border-5-->thick
+rounded-->0.25 rem rad
+rounded-circle-->rad 50%
+
+iamge 
+img-fluid-->adjust auto
+rounded-->slightly curve edge 
+rounded-circle-->circular
+img-thumbnail-->thumbnail style 
+
+Table
+1.Table
+2.table-striped
+3.table-bordered
+4.table-borderless
+table-hover
+table-dark
+table-light
+table-primary/secondary/success/danger/warning/info/dark/light
+table-responsive
+
+flex
+d-flex
+d-inline-flex
+flex-row
+flex-row-reverse
+flex-column 
+flex-column-reverse
+justify-content-start
+                end
+                center
+                between
+                around
+                evenly
+8 align-items-start
+              end
+              center   
+
+
+gride options(up to 12 or between column)
+
+extra small-->col-* 576px
+small-->col-sm-* 576px
+col-md-* 768px
+col-lg-* 992px
+col-xl-* 1200px
+extra extra large-->col-xxl-* 1400px
+
+Alert
+Alert
+Alert-success
+      info
+      warning
+      danger
+      dark
+      primary
+      secondary
+      light
+Alert-dismissible
+fade
+show
+data-bs-dismissible="Alert"
+btn-close
+
+buttons
+.btn
+.btn-primary/secondary/success/info/warning/danger/dark/light/link
+
+-->button size
+
+btn-lng
+btn-sm
+
+-->Block leval button
+w-100 full size button
+
+-->Active/Disabled
+active -button is cickable
+Disabled- disabled button
+
+-->spinner 
+1.border spinner
+2.colored spinner
+3.growing spinner
+4.spinner size
+5.Button with spinner
+
+dropdown
+ 
+dropdown
+btn,btn-secondary|...
+dropdown-toggle
+dropdown-menu
+dropdown-items
+data-bs-toggle="dropdown"
+
+collapse
+
+btn
+btn-primary/secondary/success/dark/white/light
+data-bs-toggle="collapse"
+href="#col1"
+data-bs-target="#col1"
+collapse
+id=col1
+card-body
+card
+
+card
+
+card
+card-img-top
+card-body
+card-title
+card-text
+card-header
+card-link
+
+accordion
+
+accordion
+accordion-item
+
+header & button classes
+
+accordion-header
+accordion-button
+collapse
+data-bs-toggle="collapse"
+data-bs-target="#col1"
+
+3.collapsible content class
+
+accordion-collapse
+collapse
+show
+id='col1"
+aria-labelled by="h1"
+data-bs-parent="#ac"
+
+content body classes
+accordion-body
+

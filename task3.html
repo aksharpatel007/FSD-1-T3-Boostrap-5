@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form with Validation and Modal</title>
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        
+        <form class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="userName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="userName" required>
+               
+                <div class="invalid-feedback">
+                    Please enter your name.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="userEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="userEmail" required>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="userMessage" class="form-label">Message (Required)</label>
+            <textarea class="form-control" id="userMessage" rows="4" required></textarea>
+                <div class="invalid-feedback">
+                    Message cannot be empty.
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="sendButton">Send</button>
+            
+            
+            <button class="btn btn-secondary" type="reset">Reset</button>
+        </form>
+
+    
+        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalTitle">Message Sent</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Message sent successfully!
+                    </div>
+                    <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script src="cdn.jsdelivr.net" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+ 
+    <script>
+      
+        (function () {
+            'use strict' 
+            
+            const form = document.querySelector('.needs-validation');
+          
+            const sendButton = document.getElementById('sendButton');
+         const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+
+          
+            sendButton.addEventListener('click', function (event) {
+                event.preventDefault(); 
+                // Check form validity using the built-in checkValidity() method
+                if (form.checkValidity()) {
+                    // If the form is valid:
+                    // 1. Mark form as validated (shows valid/invalid styles)
+                    form.classList.add('was-validated');
+                    
+                    // 2. Show the success modal
+                    successModal.show();
+                    
+                    // Optional: Reset the form fields after successful submission and modal display
+                    // form.reset(); 
+                    // form.classList.remove('was-validated'); // Remove validation styles after reset
+                } else {
+                    // If the form is invalid:
+                    // Add the Bootstrap 'was-validated' class to display feedback messages
+                    form.classList.add('was-validated');
+                }
+            }, false);
+        })();
+    </script>
+</body>
+</html>

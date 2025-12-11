@@ -1,0 +1,39 @@
+                                --->>>>Bootstrap Navbar Responsive Header component--->>>>
+
+Navbar
+Navbar-expand-lg
+Navbar-dark
+Navbar-brand
+navbar-toggler
+navbar-bs-toggle="collapse"
+navbar-toggler-icon
+navbar-collapse
+navbar-nav
+nav-link
+
+fixed-top
+fixed-bottom
+
+scrollpy -->highlight current section's link
+
+
+Bootstrap Form
+
+form-control        --->Form-control/sm/lg
+select              -->form-select
+check of radius     -->form-check,form-check-input,form-checked-lable,form-switch
+Range               -->form-range
+Input Group         -->input-group,input-group-text
+Floating lables     -->form-floating
+layout              -->row,col*
+validation          -->is-valid,is-invalid,needs-validation,was-validation,valid-feedback,invalid-feedback
+
+floating lables
+
+wrap-->i/p + lables
+       inside-->.form-floating 
+    i/p must have placeholder
+    i/p comes first then lable
+    work with,text i/p, textarea&select
+    iot work with radio/checkbox
+    textarea needs to manually height
